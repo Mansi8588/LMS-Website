@@ -72,7 +72,7 @@ const calculateNoOfLectures= (course)=>{
 
     course.courseContent.forEach(chapter => {
         if(Array.isArray(chapter.chapterContent)){
-            ttalLectures += chapter.chapterContent.length
+            totalLectures += chapter.chapterContent.length
         }
     });
     return totalLectures;
