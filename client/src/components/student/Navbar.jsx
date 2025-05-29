@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { assets } from '../../assets/assets'
 
@@ -6,7 +6,10 @@ import { Link } from 'react-router-dom';
 
 
 import { useClerk, UserButton, useUser } from '@clerk/clerk-react';
+import { AppContext } from '../../context/AppContext';
 const Navbar = () => {
+
+  const {navigate}=useContext(AppContext)
 
 
 
@@ -23,6 +26,7 @@ const {user}= useUser()
     lg:px-36 border-b border-gray-500 py-4 ${isCourseListPage ? 'bg-white':
     'bg-cyan-100/70'}`}>
      <img
+     onClick={()=> navigate('/')}
         src={assets.logo}
         alt="Logo"
         className="w-28 lg:w-32 cursor-pointer"
