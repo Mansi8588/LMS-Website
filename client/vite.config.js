@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
+
 export default defineConfig({
   theme:{
     extend:{
@@ -15,6 +16,9 @@ export default defineConfig({
       },
       gridTemplateColumns:{
       'auto':'repeat(auto-fit,minmax(200px,1fr))'
+      },
+      spacing:{
+        'section-height' : '500px',
       }
     },
   },
