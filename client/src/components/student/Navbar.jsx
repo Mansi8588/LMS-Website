@@ -9,7 +9,7 @@ import { useClerk, UserButton, useUser } from '@clerk/clerk-react';
 import { AppContext } from '../../context/AppContext';
 const Navbar = () => {
 
-  const {navigate}=useContext(AppContext)
+  const {navigate,isEducator}=useContext(AppContext)
 
 
 
@@ -38,7 +38,7 @@ const {user}= useUser()
 
 <div className='flex items-center gap-5'>
 { user && <>
-<button>Become Educator</button> | 
+<butto onClick={()=>{navigate('/educator')}}>{isEducator?'Educator Dashboard':'Become Educator'}</butto> | 
 <Link to='my-enrollments'> My Enrollments</Link>
 </>}
 </div>
@@ -58,13 +58,13 @@ const {user}= useUser()
 <div className='flex-items-center gap-1 sm:gap-2 mx-sm:text-xs'>
 
 { user && <>
-<button>Become Educator</button> | 
+<butto onClick={()=>{navigate('/educator')}}>{isEducator?'Educator Dashboard':'Become Educator'}</butto> | 
 <Link to='my-enrollments'> My Enrollments</Link>
 </>}
 </div>
 
 {
-  user ? (
+  user ? (  
     <UserButton />
   ) : (
     <button onClick={() => openSignIn()} className="cursor-pointer">
