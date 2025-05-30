@@ -79,6 +79,10 @@ const calculateNoOfLectures= (course)=>{
     return totalLectures;
 }
 
+
+
+
+
 // Fetch User Enrolled Courses 
 const fetchUserEnrolledCourses=async ()=>{
     setEnrolledCourses(dummyCourses)
