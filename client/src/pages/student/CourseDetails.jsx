@@ -40,7 +40,7 @@ setOpenSections((prev)=>(
   [index]: !prev[index],
 }
 ));
-}
+};
 
 
 
